@@ -97,6 +97,7 @@ table {
   width: 100%;
   vertical-align: middle;
   margin-bottom: 30px;
+  box-shadow: 0px 2px 14px #e0e0e0;
 }
 td, th {
   padding: 8px;
