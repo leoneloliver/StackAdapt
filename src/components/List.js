@@ -38,7 +38,7 @@ class List extends Component {
   render() {
     const {coins} = this.state
     return (
-      <div>
+      <div className={styles['max-size']}>
         <SearchBar searchFunc={(e) => this.filterNames(e)}/>
         <div className={`${styles.items} ${styles.container}`}>
         <div className={styles['row']}>
