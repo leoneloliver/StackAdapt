@@ -128,9 +128,9 @@ tr:nth-child(even) {
   text-align: center;
 }
 .list-topbar{
-  background: #47b37e;
+  background-image: linear-gradient(to left, #0ce7b0 0%, #1362cf 100%);
   color: #fff;
-
+  text-shadow: 1px 1px #909090;
 }
 .name{
   font-weight: 600;
@@ -270,16 +270,16 @@ footer span{
 }
 [class^="class-static"]{
   cursor: pointer;
-  width: 80%;
-  background: #db0765;
+  width: 86%;
+  background: #cccccc;
   display: block;
   padding: 5px;
   text-align: center;
   color: #fff;
-  border-radius: 3px;
+  border-radius: 30px;
 }
 [class^="class-static"]:hover{
-  background: #333;
+  background: #0ebdb9;
   color: #e0e0e0;
 }
 [class*="hidden"]{
