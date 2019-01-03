@@ -5,10 +5,7 @@ import axios from 'axios'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import CurrencyFormat from 'react-currency-format';
 
-
 class List extends Component {
-
-
 
   constructor(props){
     super(props)
@@ -45,12 +42,12 @@ class List extends Component {
         <SearchBar searchFunc={(e) => this.filterNames(e)}/>
         <div className={`${styles.items} ${styles.container}`}>
         <div className={styles['row']}>
-          <table id="myUL">
+          <div className={styles['main-content']}>
+            <table id="myUL">
           
             <tr className={styles['list-topbar']}>
               <th className={styles['center']}>Rank</th>
-              <th>Name</th>
-              <th className={styles['center']}>Symbol</th>
+              <th>Symbol</th>
               <th>Price</th>
               <th>Action</th>
             </tr>
@@ -60,10 +57,9 @@ class List extends Component {
                 <tr className={`${styles.eachitem}`} id={coin.id}>
                   <td><div className={styles['center']}>{ coin.rank }</div></td>
                   <td>
+                    
+                    <div>{ coin.symbol }</div>
                     <div className={styles['name']}>{coin.name}</div>
-                  </td>
-                  <td>
-                    <div className={styles['center']}>{ coin.symbol }</div>
                   </td>
                   <td>
                     <CurrencyFormat value={coin.price} displayType={'text'} thousandSeparator={true} prefix={'$'} renderText={value => <div>{value}</div>} />
@@ -73,6 +69,7 @@ class List extends Component {
             )}
 
           </table>
+          </div>
         </div>
         
       </div>

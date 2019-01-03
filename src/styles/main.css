@@ -312,6 +312,9 @@ footer span{
     right: 8px;
     bottom: 6px;
   }
+  .title-page{
+    text-align: center;
+  }
 }
 @media only screen and (max-width: 500px){
   .only-desktop,.email{
