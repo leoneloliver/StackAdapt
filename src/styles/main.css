@@ -67,6 +67,9 @@ code {
   color: #adadad;
   margin-top: 75px;
 }
+.title-page h2{
+  font-weight: 100;
+}
 .row{
   display: block;
 }
