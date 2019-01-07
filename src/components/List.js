@@ -24,7 +24,7 @@ class List extends Component {
         price: `${result.price_usd}`,
         rank: `${result.rank}`,
         id: `${result.rank}`,
-        keyword: `${result.name} ${result.symbol} ${result.price_usd}`
+        keyword: `${result.name} ${result.symbol}`
       })))
     .then(newData => this.setState({coins: newData, store: newData}))
     .catch(error => alert(error))
@@ -34,7 +34,6 @@ class List extends Component {
     this.setState({coins: this.state.store.filter((item) => item.keyword.toLowerCase().includes(e.target.value.toLowerCase()))})
   }
 
-
   render() {
     const {coins} = this.state
     return (
@@ -43,21 +42,18 @@ class List extends Component {
         <div className={`${styles.items} ${styles.container}`}>
         <div className={styles['row']}>
           <div className={styles['main-content']}>
-            <table id="myUL">
-          
+            <table id="myUL">         
             <tr className={styles['list-topbar']}>
               <th className={styles['center']}>Rank</th>
               <th>Symbol</th>
               <th>Price</th>
               <th>Action</th>
-            </tr>
-           
+            </tr>           
             {coins.map(
               coin => 
                 <tr className={`${styles.eachitem}`} id={coin.id}>
                   <td><div className={styles['center']}>{ coin.rank }</div></td>
-                  <td>
-                    
+                  <td>                   
                     <div>{ coin.symbol }</div>
                     <div className={styles['name']}>{coin.name}</div>
                   </td>
@@ -67,17 +63,14 @@ class List extends Component {
                   <td width="30px"><div className={`class-static`} data-id={coin.id}>Delete</div></td>
                 </tr>
             )}
-
           </table>
           </div>
-        </div>
-        
+        </div>        
       </div>
     </div>
     );
   }
 }
-
 
 export default List;
 
